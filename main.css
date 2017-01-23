@@ -1,0 +1,163 @@
+
+
+
+body{
+	box-sizing: border-box;
+	margin: 7%;
+	font-family: sans-serif;
+}
+nav {
+	height: 50px;
+	width: 100%;
+	margin-bottom: 5px;
+	background-color: #FFB4B0;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+
+
+
+}
+
+nav ul li {
+	list-style-type: none;
+	display: inline;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: black;
+	padding-right: 5px;
+}
+
+/*styling for the two boxes in body*/
+
+.playerWrapper{
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	
+}
+
+#boxLeft {
+	
+	float: left;
+	width:30%;
+	height: 400px;
+	background-color: #4DD7FA;  
+	color: black;
+	text-align: left;
+	margin-right:0;
+	border-style: solid;
+	border-color: black;
+	border-width: .75px;
+	list-style-type: none;
+	margin-right: 0;
+	}
+
+
+
+#rightBox {
+	width:60%;
+	height: 400px;
+	float:right;
+	background-color: #FEFAC0;
+	color: #785616;
+	text-align: left;
+	border-style: solid;
+	border-color: black;
+	border-width: .75px;
+	margin-left: 0;
+}
+
+/*clear the float
+
+*/
+#clearFloat{
+	clear: both;
+}
+footer{
+	}
+
+/*.group :after{
+	content: "";
+	display: table;
+	clear: both;
+
+
+}
+*/
+.songInfo h2 {
+	text-align: left;
+	padding-left: 1em;
+	
+
+
+}
+
+
+.songInfo ul li {
+	text-align: left;
+	padding-left: 1em;
+	display: inline-block;
+	list-style-type: none;	
+	padding-right: 2em;
+	border-right-color: black;
+	border-right-style: solid;
+	border-right-width: 1px;
+
+}
+
+/*float the two columns for form buttom*/
+
+.bottomSquare{
+	padding: 5px;
+}
+#leftColumn {
+	padding-left: 5px;
+	float: left;
+	display: block;
+
+
+}
+
+#rightColumn {
+	padding-right: 5px;
+	float: right;
+	display: block;
+
+}
+
+/*clear the float*/
+#floatyFloat{
+	clear: both;
+}
+
+
+
+
+.bottomSquare:after {
+
+	content: "";
+	display: table;
+	clear: both;
+
+}
+
+.bottomSquare ul li {
+	list-style-type: none;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	padding-left: .5em;
+	padding: right: .5em;
+}
+
+button{
+	margin-left: 35%;
+
+}
+
+footer {
+	width: 100%;
+	
+}
+
+
