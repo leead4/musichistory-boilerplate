@@ -43,7 +43,7 @@ function musicMaker(artist, song, album){
   this.album = album;
 };
 
-
+var bigObjectArray = [];
 
 for (var i = 0; i < cleanSongs.length; i++){
  
@@ -65,31 +65,146 @@ var middleEndPart = cleanSongs[i].indexOf("on the album");
 var bandName = cleanSongs[i].substring(middleStartPart, middleEndPart);
 // console.log(bandName);
 //make our object
+
 var songObject = new musicMaker(bandName, songName, albumName);
-console.log(songObject);
+//console.log(songObject);
+
+bigObjectArray.push(songObject);
+
+
 
 }
 
+console.log(bigObjectArray);
+
+
 //writing into the DOM
-//access the keys in the objects from music Maker
+ 
 
-// for (var prop in musicMaker){
+function musicWriter(potatoArray) {
+	var target = document.getElementById("rightBox");
+		for (var i = 0; i < potatoArray.length; i++){
+ 			
+ 			var potatoObject = potatoArray[i];
+ 			
+			//console.log(potatoObject);
+			//console.log(potatoObject.song);
+			//console.log(potatoObject.album);
+			//console.log(potatoObject.artist);
 
-// }
+			
+			
+
+//create our elements
+	var musicBaby = document.createElement("DIV");
+		musicBaby.setAttribute("class", "songInfo");
+		//console.log(musicBaby);
+	var musicBabyHeader = document.createElement("H2"); ///this is our song name
+		musicBabyHeader.innerHTML = potatoObject.song.toString();
+		//console.log(musicBabyHeader);
+		
+///make a ul
+		var musicBabyList = document.createElement("UL");
+		var musicBabyArtist = document.createElement("LI");
+		var musicBabyAlbum = document.createElement("LI");
+		var musicBabyGenre = document.createElement("LI");
+	//	console.log(music);
+///make li for the name and genre
+
+		musicBabyAlbum.innerHTML = potatoObject.album.toString();
+		musicBabyArtist.innerHTML = potatoObject.artist.toString();
+		musicBabyGenre.innerHTML = "Genre";
+		
+//add to the DOM
+		musicBabyList.appendChild(musicBabyAlbum);
+		musicBabyList.appendChild(musicBabyArtist);
+		musicBabyList.appendChild(musicBabyGenre);
+		console.log(musicBabyList);
+		
+		musicBaby.appendChild(musicBabyHeader);
+		musicBaby.appendChild(musicBabyList);
+		console.log(musicBaby);
+
+		target.appendChild(musicBaby);
+
+
+	
+	 }
+
+}
+
+musicWriter(bigObjectArray);
+
+////success!
+
+//////////////////////////eventListeners/adding to DOM javascript////////////
+
+var addMusicButton = document.getElementById("addMusic");
+
+var listMusicButton = document.getElementById("listMusic");
+var pageMagic = document.getElementById("potato");
+var userInputView = document.getElementById("hideMe");
+
+   addMusicButton.addEventListener("click", changeView);
+   listMusicButton.addEventListener("click", goBack);
 
 
 
 
-//
+ function changeView(){
+ 	console.log("im changing!");
+ 	pageMagic.classList.remove("visible");
+ 	pageMagic.classList.add("hidden");
+
+ 	userInputView.classList.remove("hidden");
+ 	userInputView.classList.remove("visible");
+
+
+
+
+ }
+
+ function goBack(){
+ 	console.log("im going back!");
+ 	pageMagic.classList.remove("hidden");
+ 	pageMagic.classList.add("visible");
+
+	userInputView.classList.remove("visible");
+ 	userInputView.classList.add("hidden");
+ 
+ }
 
 
 
 
 
 
+/////////////////////adding user input to our array!
+
+
+var addButton = document.getElementById("addIt")
+
+addButton.addEventListener("click", addMonster);
+
+/////////////take this text and add them to our constructor function 
 
 
 
+
+function addMonster(){
+
+var userArtistInput = document.getElementById("artistInput").value;
+var userAlbumInput = document.getElementById("albumInput").value;
+var userSongInput = document.getElementById("songInput").value;
+;
+
+var userSongObject = new musicMaker(userArtistInput, userSongInput, userAlbumInput);
+bigObjectArray.push(userSongObject);
+console.log(userSongObject);
+console.log(bigObjectArray);
+musicWriter(bigObjectArray);
+
+}
 
 
 

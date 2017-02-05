@@ -14,130 +14,87 @@
 		<ul>
 			<li>View Music</li>
 			
-			<li><a href="#">Add Music</a></li>
+			<li><a href="#" id="addMusic">Add Music</a></li>
 			
-			<li><a href="#">Profile</a></li>
+			<li><a href="#" id="listMusic">List Music</a></li>
 		
 		</ul>
 	
 	</nav>
 	
-	<!-- <div class="playerWrapper"> -->
-		
-		<section id="boxLeft">
+<div id="hideMe" class="hidden">
+	Artist Name: <input type="text" name="Artist" id="artistInput">
+	<br>
+	Song Name: <input type="text" name="Song Name" id="songInput">
+	<br>
+	Album Name: <input type="text" name="Album" id="albumInput">
+	<div></div>
+	<button id="addIt">Add</button>
+</div>
 
-		   		<!-- <audio controls> -->
+<div id="potato" class="visible"> 
+		
+	<section id="boxLeft">
+	<div>Song Length </div>
+
+		   		<audio controls>
 		   			<!-- <source src="" type=""> -->
-		   		<!-- </audio> -->
+		   		</audio>
 		   	
-		   	
-			<form>
-				Artist:
-				<br>
-			    	<input list="artistNames" placeholder="Options">
+	<div>
+	<div>Artist:</div>
+				<input list="artistNames" placeholder="Options">
 			    		<datalist id="artistNames">
 			    		<option value="Sam Cooke">
 			    		<option value="Steely Dan">
 			    		<option value="Aretha Franklin">
 			    		<option value="Otis Redding">
-			    	</datalist>
-    		</form>
-				<br>
+			    		</datalist>
+	</div>
+				
    	
 	
-				<form>
-				Album:
-				<br>
-			    	<input list="artistAlbum" placeholder="Options">
+	<div>
+	<div>Album:</div>
+				<input list="artistAlbum" placeholder="Options">
 			    		<datalist id="artistAlbum">
 			    			<option value="Songs By Sam Cooke">
 			    			<option value="Encore">
 			    			<option value="Pain In My Heart">
 			    			<option value="Respect">
     					</datalist>
-   			 	</form>
- 			<br>
+   	</div>
+ 			
 
- 			<form class="bottomSquare">
- 				<label for="genre">Genre:</label>
- 				<br>
+ 			<div class="bottomSquare">
+ 				<div><label for="genre">Genre:</label></div>
+ 				
  	
- 	        	<div id="leftColumn">
- 				    
- 				    
- 					<input type="checkbox"> <label for="genre"> Rock</label>
- 					<br>
- 					
- 					<input type="checkbox"><lable for="genre">Pop</lable>
- 				<br>
- 					
- 					<input type="checkbox"><label for="genre">Blues</label>
- 					<br>
- 			
+ 	        	<div class="leftColumn">
+ 				   <div> <input type="checkbox"><label for="genre"> Rock</label> </div>
+ 					<div><input type="checkbox"><lable for="genre">Pop</lable></div>
+ 					<div><input type="checkbox"><label for="genre">Blues</label></div>
  				</div>
- 	
- 			<div id="rightColumn">
- 					
- 					
- 					<input type="checkbox"><label for="genre">Classical</label>
- 					<br>
- 					
- 					<input type="checkbox"><label for="genre">Jazz</label>
- 					<br>
- 					
-					<input type="checkbox"><label for="genre">Hip Hop</label>
-					<br>
  			
- 			</div>
+ 	
+ 			<div class="rightColumn">
+ 					<div><input type="checkbox"><label for="genre">Classical</label></div>
+ 					<div><input type="checkbox"><label for="genre">Jazz</label></div>
+ 					<div><input type="checkbox"><label for="genre">Hip Hop</label></div>
+				</div>
+				
  			<div id="floatyFloat"></div>
  			<button>Filter</button>
+</div>
+ 	</section>
  
- 			</form>
- 	</div>
-
-	</section>
 	
 		<section id="rightBox">
 
 		
-			<div class="songInfo">
-				<h2>Respect</h2>
-					<ul>
-						<li>Aretha Franklin</li>
-						<li>Respect</li>
-						<li>Blues</li>
-					</ul>
-        	</div>
-			
-			<div class="songInfo">
-				<h2>Try a Little Tenderness</h2>
-					<ul>
-						<li>Otis Redding</li>
-						<li>Pain in My Heart</li>
-						<li>Blues</li>
-					</ul>
-        	</div>
-        
-        <div class="songInfo">
-			<h2>SummerTime</h2>
-				<ul>
-					<li>Sam Cooke</li>
-					<li>Songs by Sam Cooke</li>
-					<li>Blues</li>
-				</ul>
-        </div>
-		
-		<div class="songInfo">
-			<h2>Reelin in the Years</h2>
-				<ul>
-					<li>Steely Dan</li>
-					<li>Can't buy a Thrill</li>
-					<li>Rock</li>
-				</ul>
-        </div>
-
    	</section>
-   	<div id="clearFloat"></div>
+   	
+   	</div>
 <!-- </div> -->
 <footer>
 

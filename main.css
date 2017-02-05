@@ -1,10 +1,46 @@
+.visible {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding-top: 1%;
+	padding-bottom: 5%;
+	margin: auto;
+	
+}
+.hidden {
+	display: none;
+}
+
+
+
+
+/*#potato {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	padding-top: 1%;
+	padding-bottom: 5%;
+	margin:0;
+	
+}*/
+
+
+
+
+
+
+
+
+
+
 
 
 
 body{
-	box-sizing: border-box;
-	margin: 7%;
+	/*box-sizing: border-box;*/
+	/*margin: 7%;*/
 	font-family: sans-serif;
+	padding: 5%;
 }
 nav {
 	height: 50px;
@@ -13,7 +49,7 @@ nav {
 	background-color: #FFB4B0;
 	border-style: solid;
 	border-color: black;
-	border-width: 1px;
+	border-width: 3px;
 
 
 
@@ -28,43 +64,46 @@ nav ul li {
 	padding-right: 5px;
 }
 
+
+
 /*styling for the two boxes in body*/
 
-.playerWrapper{
-	width: 100%;
-	padding-top: 5%;
-	padding-bottom: 5%;
-	
+
+
+audio {
+	background-color: grey;
+	object-position: center;
 }
 
 #boxLeft {
 	
 	float: left;
-	width:30%;
-	height: 400px;
+	width:35%;
+	height: 80%;
 	background-color: #4DD7FA;  
 	color: black;
 	text-align: left;
 	margin-right:0;
 	border-style: solid;
 	border-color: black;
-	border-width: .75px;
+	border-width: 3px;
 	list-style-type: none;
-	margin-right: 0;
+	margin-right: 2.5%;
+	padding: 3%;
 	}
 
 
 
 #rightBox {
 	width:60%;
-	height: 400px;
+	height: 80%;
 	float:right;
 	background-color: #FEFAC0;
 	color: #785616;
 	text-align: left;
 	border-style: solid;
 	border-color: black;
-	border-width: .75px;
+	border-width: 3px;
 	margin-left: 0;
 }
 
@@ -109,20 +148,25 @@ footer{
 /*float the two columns for form buttom*/
 
 .bottomSquare{
+	/*height: 90%;*/
 	padding: 5px;
 }
-#leftColumn {
-	padding-left: 5px;
+.leftColumn {
+	width: 40%;
+	height: 90%;
+	/*padding-left: 2px;*/
 	float: left;
-	display: block;
+	display: inline-block;
 
 
 }
 
-#rightColumn {
-	padding-right: 5px;
+.rightColumn {
+	width: 40%;
+	height: 90%;
+	/*padding-right: 2px;*/
 	float: right;
-	display: block;
+	display: inline-block;
 
 }
 
@@ -134,30 +178,54 @@ footer{
 
 
 
-.bottomSquare:after {
+/*.bottomSquare:after {
 
 	content: "";
 	display: table;
 	clear: both;
 
-}
+}*/
 
-.bottomSquare ul li {
+.leftColumn ul li {
 	list-style-type: none;
 	padding-top: .5em;
 	padding-bottom: .5em;
 	padding-left: .5em;
-	padding: right: .5em;
+	padding-right: .5em;
+	display: inline-block;
+
+
 }
 
-button{
+button {
 	margin-left: 35%;
+	font-size: 16px;
+
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	border-radius: 10%
+
+}
+
+input[type=checkbox] {
+	
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+	border-radius: 10%
+
 
 }
 
 footer {
 	width: 100%;
 	
+}
+
+#hideMe input {
+	margin: auto;
+
 }
 
 
